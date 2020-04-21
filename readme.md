@@ -1,6 +1,6 @@
 This folder contains two py files:
 1. the program `min_temp_spread.py` process the file name `w_data (5).dat` and print out the day number with the minimal temperture spread of the month's data, and the minimal temperture spread for verification later.
-2.
+
 Run the program by the following command in your bash shell
 
 ```
