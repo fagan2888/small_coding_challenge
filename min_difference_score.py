@@ -29,7 +29,7 @@ class DataProcess:
         print("The team with the smallest difference in ‘for’ and ‘against’ goals is:", min_team, ", with score difference of", self.min_difference)
 
 if __name__ == '__main__':
-        parser = argparse.ArgumentParser(description='a small program to process the wheather data')
+        parser = argparse.ArgumentParser(description='a small program to process the soccer data')
         parser.add_argument('-i', '--infile', help='the file name to be processed')
         args = parser.parse_args()
 

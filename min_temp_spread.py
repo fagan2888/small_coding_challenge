@@ -3,7 +3,8 @@ import sys
 
 """
 Build a Data Process class, contains a global minimum -- initiate to be a very big number -- keeping track of the minimum that has been seen
-function  caculate_min_spread process the dat file line by line to calucate the temperature spread for each month, compare it with the global minimum and make modification accordingly
+function  caculate_min_spread processes the dat file line by line to calucate the temperature spread for each month, compare it with the global minimum and make modification accordingly
+function return the global minimum
 """
 
 class DataProcess:
@@ -17,6 +18,7 @@ class DataProcess:
 
             for line in file:
                 line = line.split()
+                # filter the lines that do not contain the correct format of data
                 if len(line) > 3 and line[0] != 'mo':
                     day_number, max_temp, min_temp = line[0], line[1].strip("*"), line[2].strip("*")
                     spread = int(max_temp) - int(min_temp)
