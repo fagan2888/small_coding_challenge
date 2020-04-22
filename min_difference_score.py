@@ -2,14 +2,16 @@ import argparse
 import sys
 
 """
-Build a Data Process class, contains a global minimum -- initiate to be a very big number -- keeping track of the minimum that has been seen
+The Data Process class contains a global minimum -- initiated to be a very big number -- keeping track of the minimum that has been seen
 function  caculate_min_score_difference processes the dat file line by line to calucate the absolution difference between A and F for each team, compare it with the global minimum and make modification accordingly
-function return the global minimum
 """
 
 class DataProcess:
     min_difference = sys.maxsize
-
+    """
+    @file_path: string indicate the path of the data file
+    @ return the global minimum seen in the data file
+    """
     def caculate_min_score_difference(self, file_path):
         with open(file_path, 'r') as file:
             #skip the first few lines which are headers and line changes

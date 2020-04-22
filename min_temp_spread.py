@@ -2,14 +2,17 @@ import argparse
 import sys
 
 """
-Build a Data Process class, contains a global minimum -- initiate to be a very big number -- keeping track of the minimum that has been seen
+The Data Process class contains a global minimum -- initiated to be a very big number -- keeping track of the minimum that has been seen
 function  caculate_min_spread processes the dat file line by line to calucate the temperature spread for each month, compare it with the global minimum and make modification accordingly
 function return the global minimum
 """
 
 class DataProcess:
     min_spread = sys.maxsize
-
+    """
+    @file_path: string indicate the path of the data file
+    @ return the global minimum seen in the data file
+    """
     def caculate_min_spread(self, file_path):
         with open(file_path, 'r') as file:
             # skipping the first few lines that are headers, line changes
